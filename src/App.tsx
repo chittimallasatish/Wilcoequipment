@@ -38,6 +38,7 @@ import QuoteModal from "./components/QuoteModal";
 import InteractiveProcessExplorer from "./components/InteractiveProcessExplorer";
 import ProjectTimeline from "./components/ProjectTimeline";
 import TechnicalFAQ from "./components/TechnicalFAQ";
+import TestimonialsCarousel from "./components/TestimonialsCarousel";
 import WilcoLogo from "./components/WilcoLogo";
 
 const equipmentCategories = [
@@ -205,7 +206,7 @@ export default function App() {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-8">
-            {["Services", "Blueprint", "Equipment", "Line Card", "Timeline", "FAQ", "Contact"].map((item) => (
+            {["Services", "Blueprint", "Equipment", "Line Card", "Timeline", "Reviews", "FAQ", "Contact"].map((item) => (
               <Tooltip key={item} text={`Go to ${item}`}>
                 <a 
                   href={`#${item.toLowerCase().replace(" ", "")}`}
@@ -238,7 +239,7 @@ export default function App() {
             animate={{ opacity: 1, y: 0 }}
             className="md:hidden bg-white absolute top-full left-0 w-full shadow-xl border-t border-slate-100 py-6 px-4 flex flex-col gap-4"
           >
-            {["Services", "Blueprint", "Equipment", "Line Card", "Timeline", "FAQ", "Contact"].map((item) => (
+            {["Services", "Blueprint", "Equipment", "Line Card", "Timeline", "Reviews", "FAQ", "Contact"].map((item) => (
               <a 
                 key={item} 
                 href={`#${item.toLowerCase().replace(" ", "")}`}
@@ -895,6 +896,9 @@ export default function App() {
       {/* Technical FAQ & GEO Answer Section */}
       <TechnicalFAQ onOpenQuote={handleOpenQuote} />
 
+      {/* Verified Client Testimonials Carousel */}
+      <TestimonialsCarousel onOpenQuote={handleOpenQuote} />
+
       {/* Contact Section */}
       <section id="contact" className="py-32 bg-slate-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -972,7 +976,7 @@ export default function App() {
             <div>
               <h4 className="text-white font-black uppercase tracking-widest text-sm mb-8">Quick Links</h4>
               <ul className="space-y-4 font-bold">
-                {["Services", "Blueprint", "Equipment", "Line Card", "Timeline", "FAQ", "Contact"].map((item) => (
+                {["Services", "Blueprint", "Equipment", "Line Card", "Timeline", "Reviews", "FAQ", "Contact"].map((item) => (
                   <li key={item}><a href={`#${item.toLowerCase().replace(" ", "")}`} className="hover:text-blue-500 transition-colors uppercase tracking-tight">{item}</a></li>
                 ))}
               </ul>
