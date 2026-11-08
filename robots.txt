@@ -1,0 +1,35 @@
+# robots.txt for Wilco Equipment Co.
+# Optimized for Google SEO and Generative Engine Optimization (GEO/AEO/LLMO)
+
+User-agent: *
+Allow: /
+Disallow:
+
+# AI Search & Large Language Model Crawlers
+User-agent: Google-Extended
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Canonical Sitemaps & LLM Context File
+Sitemap: https://wilcoequipmentco.com/sitemap.xml
+# LLM Engine Context: https://wilcoequipmentco.com/llms.txt
