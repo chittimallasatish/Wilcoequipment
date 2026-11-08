@@ -1009,7 +1009,7 @@ export default function App() {
         initialEquipment={quoteService}
       />
 
-      <ChatBot />
+      <ChatBot onOpenQuote={handleOpenQuote} />
 
       <style>{`
         @keyframes marquee {
